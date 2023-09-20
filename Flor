@@ -1,0 +1,29 @@
+import turtle
+
+def dibujar_petalos():
+    turtle.color("yellow")
+    turtle.begin_fill()
+    for i in range(6):
+        turtle.circle(50, 60)
+        turtle.left(120)
+    turtle.end_fill()
+
+def dibujar_tallo():
+    turtle.color("green")
+    turtle.begin_fill()
+    turtle.left(90)
+    turtle.forward(100)
+    turtle.right(90)
+    turtle.circle(10, 180)
+    turtle.right(90)
+    turtle.forward(100)
+    turtle.end_fill()
+
+def dibujar_flor_con_tallo():
+    turtle.speed(1)
+    dibujar_petalos()
+    dibujar_tallo()
+
+turtle.shape("turtle")
+dibujar_flor_con_tallo()
+turtle.done()
